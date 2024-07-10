@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Healthcareapp</string>
+    <string name="splash_screen_logo">Splash Screen Logo</string>
+   
 </resources>
