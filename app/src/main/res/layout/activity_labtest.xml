@@ -8,15 +8,22 @@
     android:background="@color/white"
     tools:context=".labtest">
 
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_view"
+        />
+
     <TextView
         android:id="@+id/titleHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="24/7 Healthcare"
-        android:textColor="@color/green"
+        android:text="Health Packages"
+        android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
