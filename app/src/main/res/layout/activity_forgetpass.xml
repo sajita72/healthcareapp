@@ -76,7 +76,10 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:hint="981420942"
-            android:textColorHint="@color/black"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColorHint="@color/grey"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
