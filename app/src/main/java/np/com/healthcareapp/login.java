@@ -48,7 +48,7 @@ text.setOnClickListener(new View.OnClickListener() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login.this, home.class);
+                Intent intent = new Intent(login.this, bottomnav.class);
                 startActivity(intent);
             }
         });
