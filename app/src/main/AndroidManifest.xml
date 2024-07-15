@@ -6,15 +6,29 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/plogo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/plogo"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcareapp"
         tools:targetApi="31">
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".bottomnav"
+            android:exported="false" />
+        <activity
+            android:name=".doctordetail"
+            android:exported="false" />
+        <activity
+            android:name=".package_detail"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".savepass"
@@ -30,28 +44,19 @@
             android:exported="true" />
         <activity
             android:name=".labtest"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".registration"
             android:exported="true" />
         <activity
             android:name=".login"
-            android:exported="false">
-
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".home"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>
