@@ -8,12 +8,14 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import java.util.concurrent.LinkedTransferQueue;
 
 
 public class home extends AppCompatActivity {
     TextView text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class home extends AppCompatActivity {
                startActivity(intent);
            }
        });
+
 
 
         }
