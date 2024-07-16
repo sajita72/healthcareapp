@@ -126,7 +126,7 @@
                     android:src="@drawable/home1" />
 
                 <TextView
-                   android:id="@+id/lab1"
+                    android:id="@+id/lab1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LAB TEST"
@@ -203,6 +203,7 @@
                     android:src="@drawable/fontisto_doctor" />
 
                 <TextView
+                    android:id="@+id/doc1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DOCTORS"

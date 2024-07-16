@@ -62,7 +62,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintTop_toBottomOf="@id/textView"
-       android:layout_marginTop="40dp" >
+        android:layout_marginTop="40dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,12 +78,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:hint="981420942"
-<<<<<<< HEAD
-            android:imeOptions="actionDone"
-            android:importantForAutofill="no"
-            android:inputType="number"
-=======
->>>>>>> 6670f0e39cca5f5113338610c4da8a6e6a5541a4
             android:textColorHint="@color/grey"
             android:textColor="@color/black"
             android:textSize="20sp"/>

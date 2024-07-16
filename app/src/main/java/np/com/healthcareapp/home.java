@@ -8,14 +8,12 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import java.util.concurrent.LinkedTransferQueue;
 
 
 public class home extends AppCompatActivity {
     TextView text;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,15 +23,14 @@ public class home extends AppCompatActivity {
 
 
         text = findViewById(R.id.lab1);
-       text.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(home.this, labtest.class);
-               startActivity(intent);
-           }
-       });
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home.this, labtest.class);
+                startActivity(intent);
+            }
+        });
 
 
-
-        }
     }
+}
