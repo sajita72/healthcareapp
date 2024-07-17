@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
 }
 
+
 android {
     namespace = "np.com.healthcareapp"
     compileSdk = 34
@@ -43,5 +44,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("io.coil-kt:coil:2.6.0")
+
 
 }

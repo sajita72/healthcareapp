@@ -14,7 +14,7 @@ import java.util.List;
 import np.com.healthcareapp.adapter.ProductListAdapter;
 import np.com.healthcareapp.model.doctor;
 
-public class ProductListActivity extends AppCompatActivity {
+public class productlist extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
