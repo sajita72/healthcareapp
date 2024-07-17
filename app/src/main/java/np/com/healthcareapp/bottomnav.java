@@ -19,11 +19,11 @@ import np.com.healthcareapp.fragment.profilefragment;
 
 public class bottomnav extends AppCompatActivity {
 
-BottomNavigationView bottomNavigationView;
-FrameLayout frameLayout;
-homefragment homeFragment = new homefragment();
-appointmentfragment appointmentFragment = new appointmentfragment();
-profilefragment profileFragment = new profilefragment();
+    BottomNavigationView bottomNavigationView;
+    FrameLayout frameLayout;
+    homefragment homeFragment = new homefragment();
+    appointmentfragment appointmentFragment = new appointmentfragment();
+    profilefragment profileFragment = new profilefragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,48 +31,48 @@ profilefragment profileFragment = new profilefragment();
         setContentView(R.layout.activity_bottomnav);
 
 
-bottomNavigationView = findViewById(R.id.bottomnav);
-frameLayout = findViewById(R.id.container);
+        bottomNavigationView = findViewById(R.id.bottomnav);
+        frameLayout = findViewById(R.id.container);
 
-bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-    @Override
-    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
 
-        int itemID = menuItem.getItemId();
+                int itemID = menuItem.getItemId();
 
-        if (itemID == R.id.home){
-           loadFragment(new homefragment(),false);
+                if (itemID == R.id.home){
+                    loadFragment(new homefragment(),false);
 
-        } else if (itemID == R.id.appointment) {
-            loadFragment(new appointmentfragment(),false);
+                } else if (itemID == R.id.appointment) {
+                    loadFragment(new appointmentfragment(),false);
 
-        }else {
-            loadFragment(new profilefragment(),false);
+                }else {
+                    loadFragment(new profilefragment(),false);
 
-        }
+                }
 
 
-        return true;
-    }
-});
+                return true;
+            }
+        });
         loadFragment(new homefragment(),true);
 
 
+    }
+
+    private void loadFragment(Fragment fragment,boolean isAPPinitialized) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        if (isAPPinitialized){
+            fragmentTransaction.add(R.id.container, fragment);
+
+        }else{
+            fragmentTransaction.replace(R.id.container,fragment);
         }
 
-        private void loadFragment(Fragment fragment,boolean isAPPinitialized) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            if (isAPPinitialized){
-                fragmentTransaction.add(R.id.container, fragment);
-
-            }else{
-                fragmentTransaction.replace(R.id.container,fragment);
-            }
-
-            fragmentTransaction.commit();
-
-        }
+        fragmentTransaction.commit();
 
     }
+
+}

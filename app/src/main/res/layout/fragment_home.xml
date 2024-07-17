@@ -159,6 +159,7 @@
                     android:src="@drawable/medicine" />
 
                 <TextView
+                    android:id="@+id/tvmedicine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MEDICINE"
@@ -197,6 +198,7 @@
                     android:src="@drawable/fontisto_doctor" />
 
                 <TextView
+                    android:id="@+id/tvdoctors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DOCTORS"
