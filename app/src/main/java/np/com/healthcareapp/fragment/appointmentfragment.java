@@ -12,10 +12,10 @@ import np.com.healthcareapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AppointmentFragment#newInstance} factory method to
+ * Use the {@link appointmentfragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AppointmentFragment extends Fragment {
+public class appointmentfragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class AppointmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AppointmentFragment() {
+    public appointmentfragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class AppointmentFragment extends Fragment {
      * @return A new instance of fragment AppointmentFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AppointmentFragment newInstance(String param1, String param2) {
-        AppointmentFragment fragment = new AppointmentFragment();
+    public static appointmentfragment newInstance(String param1, String param2) {
+        appointmentfragment fragment = new appointmentfragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

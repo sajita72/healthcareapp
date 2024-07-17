@@ -1,9 +1,6 @@
 package np.com.healthcareapp.adapter;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,18 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import np.com.healthcareapp.R;
-import np.com.healthcareapp.doctordetail;
-import np.com.healthcareapp.home;
 import np.com.healthcareapp.model.doctor;
 
 
-public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>{
+public class productlistadapter extends RecyclerView.Adapter<productlistadapter.ProductListViewHolder>{
 
     List<doctor> productList;
 
     Context context;
 
-    public ProductListAdapter(List<doctor> productList){
+    public productlistadapter(List<doctor> productList){
         this.productList = productList;
 
     }

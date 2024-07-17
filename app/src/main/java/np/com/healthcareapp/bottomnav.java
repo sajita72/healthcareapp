@@ -13,17 +13,17 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import np.com.healthcareapp.fragment.AppointmentFragment;
-import np.com.healthcareapp.fragment.HomeFragment;
-import np.com.healthcareapp.fragment.ProfileFragment;
+import np.com.healthcareapp.fragment.appointmentfragment;
+import np.com.healthcareapp.fragment.homefragment;
+import np.com.healthcareapp.fragment.profilefragment;
 
 public class bottomnav extends AppCompatActivity {
 
 BottomNavigationView bottomNavigationView;
 FrameLayout frameLayout;
-HomeFragment homeFragment = new HomeFragment();
-AppointmentFragment appointmentFragment = new AppointmentFragment();
-ProfileFragment profileFragment = new ProfileFragment();
+homefragment homeFragment = new homefragment();
+appointmentfragment appointmentFragment = new appointmentfragment();
+profilefragment profileFragment = new profilefragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +41,13 @@ bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelec
         int itemID = menuItem.getItemId();
 
         if (itemID == R.id.home){
-           loadFragment(new HomeFragment(),false);
+           loadFragment(new homefragment(),false);
 
         } else if (itemID == R.id.appointment) {
-            loadFragment(new AppointmentFragment(),false);
+            loadFragment(new appointmentfragment(),false);
 
         }else {
-            loadFragment(new ProfileFragment(),false);
+            loadFragment(new profilefragment(),false);
 
         }
 
@@ -55,7 +55,7 @@ bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelec
         return true;
     }
 });
-        loadFragment(new HomeFragment(),true);
+        loadFragment(new homefragment(),true);
 
 
         }

@@ -15,12 +15,12 @@ import np.com.healthcareapp.R;
 import np.com.healthcareapp.model.doctor;
 
 
-public class PackageListAdapter extends RecyclerView.Adapter<PackageListAdapter.PackageListViewHolder> {
+public class packagelistadapter extends RecyclerView.Adapter<packagelistadapter.PackageListViewHolder> {
 
     List<doctor> packageList;
     Context context;
 
-    public PackageListAdapter(List<doctor> packageList){
+    public packagelistadapter(List<doctor> packageList){
         this.packageList = packageList;
 
     }
