@@ -1,4 +1,4 @@
-package np.com.healthcareapp.Fragment;
+package np.com.healthcareapp.fragment;
 
 import android.os.Bundle;
 

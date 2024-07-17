@@ -44,4 +44,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("io.coil-kt:coil:2.6.0")
 
+    implementation ("com.google.code.gson:gson:2.9.1")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
 }

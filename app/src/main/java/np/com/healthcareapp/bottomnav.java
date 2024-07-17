@@ -5,11 +5,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -17,9 +13,9 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import np.com.healthcareapp.Fragment.AppointmentFragment;
-import np.com.healthcareapp.Fragment.HomeFragment;
-import np.com.healthcareapp.Fragment.ProfileFragment;
+import np.com.healthcareapp.fragment.AppointmentFragment;
+import np.com.healthcareapp.fragment.HomeFragment;
+import np.com.healthcareapp.fragment.ProfileFragment;
 
 public class bottomnav extends AppCompatActivity {
 

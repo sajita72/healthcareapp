@@ -15,7 +15,7 @@
 
 
         <activity
-            android:name=".ProductListActivity"
+            android:name=".productlist"
             android:exported="true">
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
             android:name=".package_detail"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".splashscreen"
             android:exported="true">
 
         </activity>
@@ -64,7 +64,7 @@
             android:name=".home"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".mainactivity"
             android:exported="true" />
     </application>
 
