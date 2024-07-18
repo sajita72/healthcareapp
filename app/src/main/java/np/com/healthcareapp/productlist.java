@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import np.com.healthcareapp.adapter.ProductListAdapter;
+import np.com.healthcareapp.adapter.productlistadapter;
 import np.com.healthcareapp.model.doctor;
 
 public class productlist extends AppCompatActivity {
@@ -37,7 +37,7 @@ public class productlist extends AppCompatActivity {
 
         RecyclerView rvList = findViewById(R.id.rvdoctors);
 
-        ProductListAdapter adapter = new ProductListAdapter(productListMain);
+        productlistadapter adapter = new productlistadapter(productListMain);
         rvList.setLayoutManager(new LinearLayoutManager(this));
         rvList.setAdapter(adapter);
 

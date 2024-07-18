@@ -1,4 +1,4 @@
-package np.com.healthcareapp.Fragment;
+package np.com.healthcareapp.fragment;
 
 import android.os.Bundle;
 
@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 
 import np.com.healthcareapp.R;
 
+
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AppointmentFragment#newInstance} factory method to
+ * Use the {@link profilefragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AppointmentFragment extends Fragment {
+public class profilefragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +28,7 @@ public class AppointmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AppointmentFragment() {
+    public profilefragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +38,11 @@ public class AppointmentFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AppointmentFragment.
+     * @return A new instance of fragment ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AppointmentFragment newInstance(String param1, String param2) {
-        AppointmentFragment fragment = new AppointmentFragment();
+    public static profilefragment newInstance(String param1, String param2) {
+        profilefragment fragment = new profilefragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +63,6 @@ public class AppointmentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_appointment, container, false);
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 }
