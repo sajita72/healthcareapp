@@ -32,8 +32,7 @@ public class registration extends AppCompatActivity {
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(registration.this, login.class);
-//                startActivity(intent);
+
 
                 ocemservice service = apiutils.getocemservice();
                 Call<ResponseBody> responseBodyCall = service.validateregistration("shruti", "shrut@gmail.com", "shruti@123");
@@ -51,8 +50,7 @@ public class registration extends AppCompatActivity {
 
             }
         });
+
+
     }
-
-
-
 }
