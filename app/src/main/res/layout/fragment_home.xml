@@ -235,6 +235,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/articles"/>
                 <TextView
+                    android:id="@+id/tvarticle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ARTICLES"
@@ -274,6 +275,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ambulance"/>
                 <TextView
+                    android:id="@+id/tvambulance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AMBULANCE"
@@ -285,7 +287,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/disease"
+            android:id="@+id/findclinic"
             android:layout_width="50dp"
             android:layout_height="5dp"
             android:layout_row="1"
@@ -313,9 +315,10 @@
                     android:src="@drawable/ambulance" />
 
                 <TextView
+                    android:id="@+id/tvclinic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DISEASE"
+                    android:text="CLINIC"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textStyle="bold" />

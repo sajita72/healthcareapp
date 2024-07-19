@@ -30,14 +30,14 @@ public class labtest extends AppCompatActivity {
 
 
         List<doctor> packageListMain = new ArrayList<>();
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","","Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", ""));
 
         RecyclerView rvList = findViewById(R.id.rvPackages);
         packagelistadapter adapter = new packagelistadapter(packageListMain);

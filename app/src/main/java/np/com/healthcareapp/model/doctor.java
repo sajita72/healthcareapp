@@ -9,11 +9,22 @@ public class doctor {
 
     private String image;
 
-    public doctor(String name, String speciality, String degree, String image) {
+    private String price;
+
+    private String location;
+
+    private String number;
+
+
+
+    public doctor(String name, String speciality, String degree, String image, String price, String location, String number) {
         this.name = name;
         this.speciality = speciality;
         this.degree = degree;
         this.image = image;
+        this.price = price;
+        this.location = location;
+        this.number = number;
     }
 
     public String getName() {
@@ -46,5 +57,29 @@ public class doctor {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

@@ -22,7 +22,7 @@ public class splashscreen extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(splashscreen.this, login.class);
+                Intent intent = new Intent(splashscreen.this, bottomnav.class);
                 startActivity(intent);
             }
         });

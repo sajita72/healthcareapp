@@ -13,51 +13,53 @@
         app:layout_constraintWidth_percent="0.3"
         app:layout_constraintDimensionRatio="2:2"
         android:scaleType="centerCrop"
-        android:background="@drawable/account"
-        android:id="@+id/ivProduct"
+        android:background="@drawable/pbone"
+        android:id="@+id/ivArticle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:text="Product Name"
-        app:layout_constraintStart_toEndOf="@+id/ivProduct"
-        app:layout_constraintTop_toTopOf="@+id/ivProduct"
+        android:text="Articles Name"
+        app:layout_constraintStart_toEndOf="@+id/ivArticle"
+        app:layout_constraintTop_toTopOf="@+id/ivArticle"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/green"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:id="@+id/tvProductName"/>
+        android:id="@+id/tvArticleName"/>
     <TextView
         android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:text="Product Speciality Product"
-        app:layout_constraintStart_toEndOf="@+id/ivProduct"
-        app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+        android:text="Articles Headlines"
+        app:layout_constraintStart_toEndOf="@+id/ivArticle"
+        app:layout_constraintTop_toBottomOf="@+id/tvArticleName"
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/green"
-        android:alpha="0.8"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:id="@+id/tvProductSpeciality"/>
 
-    <TextView
-        android:id="@+id/tvProductDegree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="55dp"
-        android:text="Product Degree"
-        android:textColor="@color/green"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toEndOf="@+id/ivProduct"
-        app:layout_constraintTop_toTopOf="@+id/tvProductSpeciality" />
+        android:id="@+id/tvArticleSpeciality"/>
+
+    <Button
+        android:id="@+id/btnreadmore"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="170dp"
+        android:background="@drawable/btn_bg"
+        android:layout_gravity="center"
+        android:text="READ MORE"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArticleSpeciality"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

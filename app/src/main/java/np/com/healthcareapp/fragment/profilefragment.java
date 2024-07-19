@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import np.com.healthcareapp.R;
 
+
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link profilefragment#newInstance} factory method to

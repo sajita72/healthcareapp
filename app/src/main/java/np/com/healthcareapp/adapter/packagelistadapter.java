@@ -35,7 +35,7 @@ public class packagelistadapter extends RecyclerView.Adapter<packagelistadapter.
     @Override
     public void onBindViewHolder(@NonNull PackageListViewHolder holder, int position) {
         holder.tvPackageName.setText(packageList.get(position).getName());
-        holder.tvPackagePrice.setText(packageList.get(position).getSpeciality());
+        holder.tvPackagePrice.setText(packageList.get(position).getPrice());
     }
 
     @Override
