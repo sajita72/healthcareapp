@@ -3,16 +3,16 @@ package np.com.healthcareapp.remote;
 
     public class apiutils {
 
-        private String status, token, user_name, password;
+        private String status, token, email, password;
 
 
         public apiutils() {
         }
 
-        public apiutils(String status, String token, String username, String password) {
+        public apiutils(String status, String token, String email, String password) {
             this.status = status;
             this.token = token;
-            this.user_name = username;
+            this.email = email;
             this.password = password;
         }
 
@@ -34,11 +34,11 @@ package np.com.healthcareapp.remote;
         }
 
         public String getUser_name() {
-            return user_name;
+            return email;
         }
 
         public void setPhone_number(String user_name) {
-            this.user_name = user_name;
+            this.email = email;
         }
 
         public String getPassword() {

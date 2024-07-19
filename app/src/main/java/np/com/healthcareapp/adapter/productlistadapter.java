@@ -1,6 +1,7 @@
 package np.com.healthcareapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import np.com.healthcareapp.R;
+import np.com.healthcareapp.doctordetail;
 import np.com.healthcareapp.model.doctor;
+import np.com.healthcareapp.package_detail;
 
 
 public class productlistadapter extends RecyclerView.Adapter<productlistadapter.ProductListViewHolder>{
@@ -23,7 +26,7 @@ public class productlistadapter extends RecyclerView.Adapter<productlistadapter.
 
     Context context;
 
-    public productlistadapter(List<doctor> productList){
+    public productlistadapter(Context context,List<doctor> productList){
         this.productList = productList;
 
     }
@@ -32,7 +35,7 @@ public class productlistadapter extends RecyclerView.Adapter<productlistadapter.
     @Override
     public ProductListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new ProductListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_products,parent, false
+        return new ProductListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_doctorlist,parent, false
         ));
     }
 
@@ -42,6 +45,19 @@ public class productlistadapter extends RecyclerView.Adapter<productlistadapter.
         holder.tvProductName.setText(productList.get(position).getName());
         holder.tvProductSpeciality.setText(productList.get(position).getSpeciality());
         holder.tvProductDegree.setText(productList.get(position).getDegree());
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), doctordetail.class);
+                intent.putExtra("name",productList.get(position).getName());
+                intent.putExtra("speciality",productList.get(position).getSpeciality());
+                intent.putExtra("degree",productList.get(position).getDegree());
+                intent.putExtra("description",productList.get(position).getDescription());
+                v.getContext().startActivity(intent);
+            }
+        });
 
 
 //        ImageLoader imageLoader = coil.imageLoader(context);

@@ -31,12 +31,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.063" />
 
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Package Includes "
+        android:text="Name of the package "
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,17 +46,30 @@
         app:layout_constraintTop_toBottomOf="@id/top_view" />
 
 
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="Description "
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPackageName" />
+
+
     <Button
         android:id="@+id/button2"
         android:layout_width="337dp"
         android:layout_height="44dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="320dp"
         android:background="@drawable/btn_bg"
         android:text="BOOk NOW"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintTop_toBottomOf="@id/description"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

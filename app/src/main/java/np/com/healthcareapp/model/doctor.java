@@ -9,11 +9,17 @@ public class doctor {
 
     private String image;
 
-    public doctor(String name, String speciality, String degree, String image) {
+    private String description;
+
+
+
+
+    public doctor(String name, String speciality, String degree, String image, String description) {
         this.name = name;
         this.speciality = speciality;
         this.degree = degree;
         this.image = image;
+        this.description = description;
     }
 
     public String getName() {
@@ -47,4 +53,11 @@ public class doctor {
     public void setImage(String image) {
         this.image = image;
     }
+
+
+
+    public String getDescription() {return description;}
+
+    public void setDescription(String description) { this.description = description;}
+
 }

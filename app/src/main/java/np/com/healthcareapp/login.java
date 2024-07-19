@@ -22,8 +22,8 @@ public class login extends AppCompatActivity {
 
     protected Button button;
     TextView text;
-    EditText etusername, etpassword;
-    String stUsername, stPassword;
+    EditText etemail, etpassword;
+    String stemail, stPassword;
     Intent homeIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class login extends AppCompatActivity {
         });
 
 
-        etusername = findViewById(R.id.user);
+        etemail = findViewById(R.id.user);
         etpassword = findViewById(R.id.password);
         button = findViewById(R.id.button2);
         homeIntent = new Intent(this, bottomnav.class);
@@ -61,11 +61,11 @@ public class login extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                stUsername = etusername.getText().toString();
+                stemail = etemail.getText().toString();
                 stPassword = etpassword.getText().toString();
 
                 ocemservice ocem = RetrofitService.getService(login.this).create(ocemservice.class);
-                apiutils utils = new apiutils(null,null,stUsername,stPassword);
+                apiutils utils = new apiutils(null,null,stemail,stPassword);
 
                 Call<apiutils> call = ocem.postLogin(utils);
 

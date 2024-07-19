@@ -366,6 +366,7 @@
                 app:cardUseCompatPadding="true">
 
                 <ImageView
+                    android:id="@+id/pk1"
                     android:layout_width="140dp"
                     android:layout_height="112dp"
                     android:src="@drawable/exam"
@@ -394,6 +395,8 @@
 
 
                 <ImageView
+
+                    android:id="@+id/pk2"
                     android:layout_width="140dp"
                     android:layout_height="112dp"
                     app:srcCompat="@drawable/pthyroid" />
@@ -417,6 +420,8 @@
                 app:cardUseCompatPadding="true">
 
                 <ImageView
+
+                    android:id="@+id/pk3"
                     android:layout_width="140dp"
                     android:layout_height="112dp"
                     android:src="@drawable/pbone"
@@ -441,6 +446,8 @@
                 app:cardUseCompatPadding="true">
 
                 <ImageView
+
+                    android:id="@+id/pk4"
                     android:layout_width="140dp"
                     android:layout_height="112dp"
                     android:src="@drawable/pdiabetes"
