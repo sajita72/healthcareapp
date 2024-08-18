@@ -2,7 +2,7 @@ package np.com.healthcareapp;
 
 
 import android.os.Bundle;
-import android.widget.TextView;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,23 +24,32 @@ public class labtest extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_labtest);
 
-      //  TextView tvTitle = findViewById(R.id.tvTitle);
-      // tvTitle.setText("Package List");
+
 
 
 
         List<doctor> packageListMain = new ArrayList<>();
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","hello"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho"));
+
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","hello","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
 
 
 
+
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","","Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
 
         RecyclerView rvList = findViewById(R.id.rvPackages);
         packagelistadapter adapter = new packagelistadapter(this,packageListMain);

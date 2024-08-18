@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="15dp"
+    android:background="@drawable/top_image"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivAmb2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.1"
+        android:background="@drawable/account"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:id="@+id/ivAmb3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.1"
+        android:background="@drawable/account"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAmb2"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clinic Name "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/tvClinicName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location "
+        app:layout_constraintStart_toEndOf="@+id/ivAmb2"
+        app:layout_constraintTop_toBottomOf="@+id/tvClinicName"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/green"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:id="@+id/tvLocation"/>
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="Phone Number"
+        android:textColor="@color/green"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/ivAmb3"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

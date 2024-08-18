@@ -45,6 +45,7 @@ public class packagelistadapter extends RecyclerView.Adapter<packagelistadapter.
         holder.tvPackagePrice.setText(packageList.get(position).getSpeciality());
 
 holder.itemView.setOnClickListener(new View.OnClickListener() {
+
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(v.getContext(), package_detail.class);
@@ -56,6 +57,9 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
 });
 
 
+
+
+        holder.tvPackagePrice.setText(packageList.get(position).getPrice());
 
     }
 
@@ -78,7 +82,6 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
             tvPackageName = itemView.findViewById(R.id.tvPackageName);
             tvPackagePrice = itemView.findViewById(R.id.tvPackagePrice);
             description = itemView.findViewById(R.id.description);
-
 
 
         }

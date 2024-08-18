@@ -32,6 +32,17 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+button= findViewById(R.id.button2);
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(login.this, bottomnav.class);
+        startActivity(intent);
+    }
+});
+
+
+
         text= findViewById(R.id.registerhere);
         text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,35 +64,34 @@ public class login extends AppCompatActivity {
         });
 
 
-        etemail = findViewById(R.id.user);
-        etpassword = findViewById(R.id.password);
-        button = findViewById(R.id.button2);
-        homeIntent = new Intent(this, bottomnav.class);
+      //  etemail = findViewById(R.id.user);
+        //  etpassword = findViewById(R.id.password);
+        //  button = findViewById(R.id.button2);
+        // homeIntent = new Intent(this, bottomnav.class);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stemail = etemail.getText().toString();
-                stPassword = etpassword.getText().toString();
+        // button.setOnClickListener(new View.OnClickListener() {
+        //  @Override
+        //  public void onClick(View v) {
+        //   stemail = etemail.getText().toString();
+        //   stPassword = etpassword.getText().toString();
 
-                ocemservice ocem = RetrofitService.getService(login.this).create(ocemservice.class);
-                apiutils utils = new apiutils(null,null,stemail,stPassword);
+        //  ocemservice ocem = RetrofitService.getService(login.this).create(ocemservice.class);
+           //     apiutils utils = new apiutils(null,null,stemail,stPassword);
 
-                Call<apiutils> call = ocem.postLogin(utils);
+             //   Call<apiutils> call = ocem.postLogin(utils);
 
-                call.enqueue(new Callback<apiutils>() {
-                    @Override
-                    public void onResponse(Call<apiutils> call, Response<apiutils> response) {
+               // call.enqueue(new Callback<apiutils>() {
+                 //   @Override
+                   // public void onResponse(Call<apiutils> call, Response<apiutils> response) {
 
-                    }
+                   // }
+                    //@Override
+                    //public void onFailure(Call<apiutils> call, Throwable throwable) {
 
-                    @Override
-                    public void onFailure(Call<apiutils> call, Throwable throwable) {
-
-                    }
-                });
-            }
-        });
+                    //}
+                //});
+            //}
+        //});
 
 
 
@@ -90,16 +100,3 @@ public class login extends AppCompatActivity {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

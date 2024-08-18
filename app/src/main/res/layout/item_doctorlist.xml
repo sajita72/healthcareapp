@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="357dp"
+    android:layout_width="330dp"
     android:layout_height="150dp"
     android:layout_marginTop="5dp"
-    android:layout_marginStart="20dp"
+    android:layout_marginStart="15dp"
     android:background="@drawable/top_image"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.3"
-        app:layout_constraintDimensionRatio="2:2"
-        android:scaleType="centerCrop"
-        android:background="@drawable/account"
         android:id="@+id/ivProduct"
+        android:layout_width="93dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/account"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="2:2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +30,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/green"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:id="@+id/tvProductName"/>
     <TextView
@@ -40,7 +43,7 @@
         android:layout_marginTop="4dp"
         android:textColor="@color/green"
         android:alpha="0.8"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:id="@+id/tvProductSpeciality"/>
 
@@ -49,10 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="50dp"
         android:text="Product Degree"
         android:textColor="@color/green"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/ivProduct"
         app:layout_constraintTop_toTopOf="@+id/tvProductSpeciality" />

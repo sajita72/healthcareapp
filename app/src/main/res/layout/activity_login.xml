@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Login"
             android:textColor="@color/black"
-            android:textSize="34sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginTop="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
             app:layout_constraintEnd_toEndOf="@id/password"
             app:layout_constraintTop_toBottomOf="@id/password"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/green"
             />
 
 
@@ -106,8 +106,8 @@
             android:id="@+id/tvnewuser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
             android:text="Register for new user?"
             android:textColor="@color/black"
             android:textSize="20sp"

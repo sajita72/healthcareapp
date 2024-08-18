@@ -26,14 +26,17 @@ public class productlist extends AppCompatActivity {
         tvTitle.setText("Suggested Doctors");
 
         List<doctor> productListMain = new ArrayList<>();
-        productListMain.add(new doctor("Purnima Thapa", "Gynecologist, Internal Medicine","MBBS,MD","","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Shruti Kalwar", "Gynoelogist","MBBS","https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-260nw-1635029716.jpg",""));
-        productListMain.add(new doctor("Sajita Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Nima Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Purnima Thapa", "Gynecologist, Internal Medicine","MBBS,MD","","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Shruti Kalwar", "Gynoelogist","MBBS","https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-260nw-1635029716.jpg","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Sajita Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan."));
-        productListMain.add(new doctor("Nima Thapa", "Gynoelogist","MBBS","",""));
+
+        productListMain.add(new doctor("Purnima Thapa", "Gynecologist, Internal Medicine","MBBS,MD","","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Shruti Kalwar", "Gynoelogist","MBBS","https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-260nw-1635029716.jpg","","","",""));
+        productListMain.add(new doctor("Sajita Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Nima Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Purnima Thapa", "Gynecologist, Internal Medicine","MBBS,MD","","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Shruti Kalwar", "Gynoelogist","MBBS","https://www.shutterstock.com/image-photo/medical-concept-indian-beautiful-female-260nw-1635029716.jpg","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Sajita Thapa", "Gynoelogist","MBBS","","Gastroenterologist and hepatalogist practicing in chitwan.","","",""));
+        productListMain.add(new doctor("Nima Thapa", "Gynoelogist","MBBS","","","","",""));
+
+
 
         RecyclerView rvList = findViewById(R.id.rvdoctors);
 

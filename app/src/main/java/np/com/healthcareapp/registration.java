@@ -27,6 +27,7 @@ public class registration extends AppCompatActivity {
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
               Intent intent = new Intent(registration.this, login.class);
              startActivity(intent);
 
@@ -35,12 +36,9 @@ public class registration extends AppCompatActivity {
 
 
 
-
-
             }
         });
+
+
     }
-
-
-
 }
