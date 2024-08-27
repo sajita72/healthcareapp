@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -43,7 +44,7 @@ public class doctordetail extends AppCompatActivity {
                 @Override
                 public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                     String date = dayOfMonth + "/" + month + "/" + year;
-                    
+
                 }
             });
 

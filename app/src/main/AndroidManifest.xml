@@ -78,17 +78,6 @@
             </intent-filter>
 
         </activity>
-
-
-
-
-
-
-
-
-
-
-
         <activity
             android:name=".home"
             android:exported="false" />

@@ -44,15 +44,10 @@ public class appointmentfragment extends Fragment {
 
             tabLayout = (TabLayout) context.findViewById(R.id.tabLayout);
             viewPager2 =(ViewPager2) context.findViewById(R.id.view_pager);
-tabItem1 = (TabItem) context.findViewById(R.id.tab1);
-            tabItem2 = (TabItem) context.findViewById(R.id.tab2);
-            tabItem3 = (TabItem) context.findViewById(R.id.tab3);
 
 
-
-
- //myViewPagerAdapter = new MyViewPagerAdapter(this);
- //viewPager2.setAdapter(myViewPagerAdapter);
+           myViewPagerAdapter = new MyViewPagerAdapter(getChildFragmentManager(), getLifecycle());
+            viewPager2.setAdapter(myViewPagerAdapter);
 
 
 
@@ -75,7 +70,13 @@ tabItem1 = (TabItem) context.findViewById(R.id.tab1);
                 }
             });
 
-
+viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+    @Override
+    public void onPageSelected(int position) {
+        super.onPageSelected(position);
+        tabLayout.getTabAt(position).select();
+    }
+});
         }
 
     }

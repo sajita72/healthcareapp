@@ -10,9 +10,13 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import np.com.healthcareapp.remote.RetrofitService;
-import np.com.healthcareapp.remote.apiutils;
-import np.com.healthcareapp.remote.ocemservice;
+import java.util.Objects;
+
+import np.com.healthcareapp.fragment.homefragment;
+import np.com.healthcareapp.remote.TokenManager;
+import np.com.healthcareapp.remote.UserModel;
+import np.com.healthcareapp.retrofit.RetrofitService;
+import np.com.healthcareapp.service.Login;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -20,11 +24,10 @@ import retrofit2.Response;
 
 public class login extends AppCompatActivity {
 
-    protected Button button;
+     Button btn;
     TextView text;
-    EditText etemail, etpassword;
-    String stemail, stPassword;
-    Intent homeIntent;
+    EditText email, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +35,78 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-button= findViewById(R.id.button2);
-button.setOnClickListener(new View.OnClickListener() {
+        String token = TokenManager.getToken(getApplicationContext());
+        if(token != null){
+            Intent tokenIntent = new Intent(this, homefragment.class);
+            startActivity(tokenIntent);
+        }
+
+
+
+
+         text = findViewById(R.id.forgetpass);
+        Intent textIntent = new Intent(this, forgetpass.class);
+        Intent loginIntent = new Intent(this, homefragment.class);
+        text.setOnClickListener(v -> startActivity(textIntent));
+
+
+          email = findViewById(R.id.user);
+          password = findViewById(R.id.password);
+          btn = findViewById(R.id.btnlogin);
+
+
+
+btn.setOnClickListener( v -> {
+    String userEmail = email.getText().toString();
+    String userPassword = password.getText().toString();
+
+    Login loginService = RetrofitService.getService(login.this).create(Login.class);
+    UserModel userModel = new UserModel(null, null, null, userEmail, userPassword);
+    Call<UserModel> call = loginService.postLogin(userModel);
+
+    call.enqueue(new Callback<UserModel>() {
+        @Override
+        public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+
+            if(response.isSuccessful()){
+                UserModel responseUserModel = response.body();
+                String token = responseUserModel.getToken();
+                String success = responseUserModel.getSuccess();
+                if(Objects.equals(success, "true")){
+                    TokenManager.saveToken(getApplicationContext(),token);
+                    Intent intent = new Intent(login.this,homefragment.class);
+                    startActivity(intent);
+                }
+            }
+        }
+
+        @Override
+        public void onFailure(Call<UserModel> call, Throwable throwable) {
+
+        }
+    });
+
+
+} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+        btn= findViewById(R.id.btnlogin);
+btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(login.this, bottomnav.class);
@@ -58,8 +131,8 @@ button.setOnClickListener(new View.OnClickListener() {
         text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login.this, forgetpass.class);
-                startActivity(intent);
+           Intent intent = new Intent(login.this, forgetpass.class);
+           startActivity(intent);
             }
         });
 

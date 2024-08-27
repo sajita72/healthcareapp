@@ -1,19 +1,19 @@
 
-package np.com.healthcareapp.remote;
+package np.com.healthcareapp.retrofit;
 
-import android.content.Context;
 
-import com.chuckerteam.chucker.api.ChuckerInterceptor;
+        import android.content.Context;
 
-import okhttp3.OkHttpClient;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+        import com.chuckerteam.chucker.api.ChuckerInterceptor;
+
+        import okhttp3.OkHttpClient;
+        import retrofit2.Retrofit;
+        import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
 
     private static Retrofit retrofit = null;
-    private static final String base_url = "https://eb33-36-252-104-156.ngrok-free.app//api/";
-
+    private static final String base_url = "https://eb33-36-252-104-156.ngrok-free.app/";
 
     private RetrofitService() {}
 
@@ -33,3 +33,5 @@ public class RetrofitService {
     }
 
 }
+
+
