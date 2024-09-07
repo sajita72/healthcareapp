@@ -29,8 +29,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new upcommingfragment();
             case 1:
-                return new completedfragment();
-            case 2:
                 return new cancellfragment();
 
             default:
@@ -40,6 +38,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 2;
     }
 }

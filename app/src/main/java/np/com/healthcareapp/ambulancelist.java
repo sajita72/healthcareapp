@@ -16,7 +16,6 @@ import np.com.healthcareapp.adapter.ambulancelistadapter;
 import np.com.healthcareapp.adapter.ambulancelistadapter;
 import np.com.healthcareapp.model.doctor;
 
-
 public class ambulancelist extends AppCompatActivity {
 
     @Override
@@ -29,13 +28,13 @@ public class ambulancelist extends AppCompatActivity {
         tvTitle.setText("Suggested Ambulance");
 
         List<doctor> ambulanceListMain = new ArrayList<>();
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
-        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9805198123",""));
+        ambulanceListMain.add(new doctor("Bharatpur -2, 44203","","","","","Chitwan and nearby","9855065223",""));
+        ambulanceListMain.add(new doctor("Bharatpur -3, 44203","","","","","Chitwan and nearby","9815198123",""));
+        ambulanceListMain.add(new doctor("Bharatpur -4, 44203","","","","","Chitwan and nearby","9805678123",""));
+        ambulanceListMain.add(new doctor("Bharatpur -5, 44203","","","","","Chitwan and nearby","9815298123",""));
+        ambulanceListMain.add(new doctor("Bharatpur -6, 44203","","","","","Chitwan and nearby","9815234789",""));
+        ambulanceListMain.add(new doctor("Bharatpur -7, 44203","","","","","Chitwan and nearby","9809101233",""));
+        ambulanceListMain.add(new doctor("Bharatpur -8, 44203","","","","","Chitwan and nearby","9814235562",""));
 
 
         RecyclerView rvList = findViewById(R.id.rvAmbulance);

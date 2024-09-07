@@ -43,7 +43,7 @@ public class medicinelistadapter extends RecyclerView.Adapter<medicinelistadapte
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), medicine_detail.class);
                 intent.putExtra("name",medicineList.get(position).getName());
-                intent.putExtra("description",medicineList.get(position).getDescription());
+                intent.putExtra("speciality",medicineList.get(position).getSpeciality());
                 intent.putExtra("price",medicineList.get(position).getPrice());
                 v.getContext().startActivity(intent);
 
@@ -68,7 +68,7 @@ public class medicinelistadapter extends RecyclerView.Adapter<medicinelistadapte
             super(itemView);
 
             tvMedicineName = itemView.findViewById(R.id.tvMedicineName);
-            tvMedicineDescription = itemView.findViewById(R.id.tvdescription);
+            tvMedicineDescription = itemView.findViewById(R.id.description);
             tvsideeffect = itemView.findViewById(R.id.tvsideeffect);
         }
     }

@@ -37,7 +37,7 @@ public class ambulancelistadapter extends RecyclerView.Adapter<ambulancelistadap
     public void onBindViewHolder(@NonNull AmbulanceListViewHolder holder, int position) {
         holder.tvLocationName.setText(ambulanceList.get(position).getName());
         holder.tvServiceArea.setText(ambulanceList.get(position).getLocation());
-        holder.tvPhoneNumber.setText(ambulanceList.get(position).getNumber());
+      //  holder.tvPhoneNumber.setText(ambulanceList.get(position).getNumber());
 
 
     }
@@ -52,20 +52,20 @@ public class ambulancelistadapter extends RecyclerView.Adapter<ambulancelistadap
 
         TextView tvLocationName;
         TextView tvServiceArea;
-        TextView tvPhoneNumber;
+       // TextView tvPhoneNumber;
         ImageView ivAmb1;
         ImageView ivAmb2;
-        ImageView ivAmb3;
+        //ImageView ivAmb3;
 
         public AmbulanceListViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvLocationName = itemView.findViewById(R.id.tvLocationName);
             tvServiceArea = itemView.findViewById(R.id.tvServiceArea);
-            tvPhoneNumber = itemView.findViewById(R.id.tvPhoneNumber);
+          //  tvPhoneNumber = itemView.findViewById(R.id.tvPhoneNumber);
             ivAmb1 = itemView.findViewById(R.id.ivAmb1);
             ivAmb2 = itemView.findViewById(R.id.ivAmb2);
-            ivAmb3 = itemView.findViewById(R.id.ivAmb3);
+          //  ivAmb3 = itemView.findViewById(R.id.ivAmb3);
         }
     }
 }

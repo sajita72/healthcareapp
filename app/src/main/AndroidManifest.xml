@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcareapp"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".item_upcomingappo"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".bookappo"
+            android:exported="false" />
         <activity
             android:name=".articlesdetail"
             android:exported="false" />
@@ -32,12 +38,9 @@
         <activity
             android:name=".package_detail"
             android:exported="false" />
-
-
         <activity
             android:name=".bottomnav"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".savepass"
             android:exported="false" />
@@ -76,7 +79,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".home"

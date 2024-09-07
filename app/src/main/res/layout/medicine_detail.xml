@@ -33,18 +33,34 @@
 
 
     <TextView
-        android:id="@+id/tvPackageName"
+        android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginStart="20dp"
-        android:text="Name of the medicine "
+        android:text="Name "
+        android:textStyle="bold"
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_view" />
+
+
+    <TextView
+        android:id="@+id/tvPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Name of the medicine "
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Name" />
 
     <TextView
         android:id="@+id/tvinfo"
@@ -62,14 +78,15 @@
         app:layout_constraintTop_toBottomOf="@id/tvPackageName" />
 
     <TextView
-        android:id="@+id/tvdescription"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
         android:text="Description "
         android:textColor="@color/green"
         android:textSize="20sp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +95,7 @@
 
 
     <TextView
-        android:id="@+id/tvsideeffect"
+        android:id="@+id/tveffect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -90,13 +107,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvdescription" />
+        app:layout_constraintTop_toBottomOf="@id/description" />
 
     <TextView
-        android:id="@+id/tveffect"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvsideeffect"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
         android:text="Description "
         android:textColor="@color/green"
@@ -104,6 +121,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvsideeffect" />
+        app:layout_constraintTop_toBottomOf="@id/tveffect" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

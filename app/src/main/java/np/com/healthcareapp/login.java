@@ -2,10 +2,12 @@ package np.com.healthcareapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,25 +30,29 @@ public class login extends AppCompatActivity {
     TextView text;
     EditText email, password;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-
         String token = TokenManager.getToken(getApplicationContext());
         if(token != null){
-            Intent tokenIntent = new Intent(this, homefragment.class);
+            Intent tokenIntent = new Intent(this, bottomnav.class);
             startActivity(tokenIntent);
         }
 
 
 
+text = findViewById(R.id.registerhere);
+        Intent intent = new Intent(this, registration.class);
+text.setOnClickListener(v -> startActivity(intent));
 
-         text = findViewById(R.id.forgetpass);
+
+        text = findViewById(R.id.forgetpass);
         Intent textIntent = new Intent(this, forgetpass.class);
-        Intent loginIntent = new Intent(this, homefragment.class);
+        Intent loginIntent = new Intent(this, bottomnav.class);
         text.setOnClickListener(v -> startActivity(textIntent));
 
 
@@ -55,13 +61,12 @@ public class login extends AppCompatActivity {
           btn = findViewById(R.id.btnlogin);
 
 
-
-btn.setOnClickListener( v -> {
+          btn.setOnClickListener( v -> {
     String userEmail = email.getText().toString();
     String userPassword = password.getText().toString();
 
     Login loginService = RetrofitService.getService(login.this).create(Login.class);
-    UserModel userModel = new UserModel(null, null, null, userEmail, userPassword);
+    UserModel userModel = new UserModel(null,null, null, userEmail, userPassword, null,null);
     Call<UserModel> call = loginService.postLogin(userModel);
 
     call.enqueue(new Callback<UserModel>() {
@@ -69,14 +74,19 @@ btn.setOnClickListener( v -> {
         public void onResponse(Call<UserModel> call, Response<UserModel> response) {
 
             if(response.isSuccessful()){
+                Log.v("login","success");
                 UserModel responseUserModel = response.body();
                 String token = responseUserModel.getToken();
                 String success = responseUserModel.getSuccess();
-                if(Objects.equals(success, "true")){
-                    TokenManager.saveToken(getApplicationContext(),token);
-                    Intent intent = new Intent(login.this,homefragment.class);
-                    startActivity(intent);
-                }
+               if(token != null){
+                   TokenManager.saveToken(getApplicationContext(),token);
+                   startActivity(loginIntent);
+               }
+               else{
+                   Toast.makeText(login.this, "Invalid Credentials.", Toast.LENGTH_SHORT).show();
+               }
+            }else{
+                Toast.makeText(login.this, "Invalid Credentials.", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -88,87 +98,6 @@ btn.setOnClickListener( v -> {
 
 
 } );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-        btn= findViewById(R.id.btnlogin);
-btn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(login.this, bottomnav.class);
-        startActivity(intent);
-    }
-});
-
-
-
-        text= findViewById(R.id.registerhere);
-        text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(login.this, registration.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-        text= findViewById(R.id.forgetpass);
-        text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-           Intent intent = new Intent(login.this, forgetpass.class);
-           startActivity(intent);
-            }
-        });
-
-
-      //  etemail = findViewById(R.id.user);
-        //  etpassword = findViewById(R.id.password);
-        //  button = findViewById(R.id.button2);
-        // homeIntent = new Intent(this, bottomnav.class);
-
-        // button.setOnClickListener(new View.OnClickListener() {
-        //  @Override
-        //  public void onClick(View v) {
-        //   stemail = etemail.getText().toString();
-        //   stPassword = etpassword.getText().toString();
-
-        //  ocemservice ocem = RetrofitService.getService(login.this).create(ocemservice.class);
-           //     apiutils utils = new apiutils(null,null,stemail,stPassword);
-
-             //   Call<apiutils> call = ocem.postLogin(utils);
-
-               // call.enqueue(new Callback<apiutils>() {
-                 //   @Override
-                   // public void onResponse(Call<apiutils> call, Response<apiutils> response) {
-
-                   // }
-                    //@Override
-                    //public void onFailure(Call<apiutils> call, Throwable throwable) {
-
-                    //}
-                //});
-            //}
-        //});
-
-
-
-
 
 
     }

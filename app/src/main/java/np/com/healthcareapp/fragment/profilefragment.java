@@ -21,6 +21,7 @@ import np.com.healthcareapp.login;
 import np.com.healthcareapp.medicinelist;
 import np.com.healthcareapp.model.doctor;
 import np.com.healthcareapp.productlist;
+import np.com.healthcareapp.remote.TokenManager;
 
 
 public class profilefragment extends Fragment {
@@ -40,6 +41,7 @@ public class profilefragment extends Fragment {
 
     }
 
+
     public void onStart(){
         super.onStart();
 
@@ -51,7 +53,6 @@ public class profilefragment extends Fragment {
                 startActivity(intent);
             }
         });
-
 
 
         TextView textVie5 = (TextView)context.findViewById(R.id.tvdoc);
@@ -74,15 +75,11 @@ textView1.setOnClickListener(new View.OnClickListener() {
 });
 
 
-
-
-
-
-
-        Button button = (Button) context.findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+        TextView textView2 = (TextView) context.findViewById(R.id.tvlog);
+        textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              TokenManager.clearToken(getContext());
                 Toast.makeText(getContext(),"Logout Success",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, login.class);
                 startActivity(intent);

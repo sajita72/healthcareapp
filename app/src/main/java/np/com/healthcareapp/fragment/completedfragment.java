@@ -13,7 +13,6 @@ import np.com.healthcareapp.R;
 
 public class completedfragment extends Fragment {
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -31,13 +31,13 @@ public class medicinelist extends AppCompatActivity {
 
         List<doctor> medicineListMain = new ArrayList<>();
 
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
-        medicineListMain.add(new doctor("Parecetamotal Medicine","","","","",".nausea .fever .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance acetylcysteine and has a  mucolytic      effect in the respiratory tract .","","",""," .vomiting   .nausea      .fever","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance. ","","","",".runnynose.vomiting   .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance.","","","",".nausea     .fever .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance.","","","",".nausea      .fever .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance.","","","",".nausea    .fever .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance acetylcysteine and has a mucolytic effect in the respiratory tract.","","","",".nausea .fever .vomiting","",""));
+        medicineListMain.add(new doctor("Parecetamotal Medicine","It contain the active substance acetylcysteine and has a mucolytic effect in the respiratory tract.","","","",".nausea .fever .vomiting","",""));
 
 
         RecyclerView rvList = findViewById(R.id.rvMedicines);

@@ -21,13 +21,21 @@ public class medicine_detail extends AppCompatActivity {
 
 
         textView = findViewById(R.id.tvPackageName);
-        textView1 = findViewById(R.id.tvdescription);
-        textView1 = findViewById(R.id.tvsideeffect);
+        textView1 = findViewById(R.id.description);
+        textView2 = findViewById(R.id.tvsideeffect);
 
 //        Log.v("testtt",intent.getDataString());
 //        textView.setText(intent.getStringExtra("name"));
 //        textView1.setText(intent.getStringExtra("description"));
 //        textView2.setText(intent.getStringExtra("price"));
+
+
+
+
+        Intent intent = getIntent();
+        textView.setText(intent.getStringExtra("name"));
+        textView1.setText(intent.getStringExtra("speciality"));
+        textView2.setText(intent.getStringExtra("price"));
 
 
         }

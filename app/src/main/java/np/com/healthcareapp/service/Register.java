@@ -10,10 +10,10 @@ import retrofit2.http.Query;
 
 public interface Register {
 
-
-
     @POST("/api/register")
     Call<UserModel> postRegister(@Body UserModel userModel);
+
+
 }
 
 

@@ -16,10 +16,12 @@ import java.util.List;
 import np.com.healthcareapp.R;
 import np.com.healthcareapp.articlesdetail;
 import np.com.healthcareapp.model.doctor;
+import np.com.healthcareapp.package_detail;
 
 
 public class articlelistadapter extends RecyclerView.Adapter<articlelistadapter.ArticleListViewHolder> {
 protected Button btn;
+
     List<doctor> articleList;
     Context context;
 
@@ -40,6 +42,17 @@ protected Button btn;
         holder.tvArticleName.setText(articleList.get(position).getName());
         holder.tvArticleSpeciality.setText(articleList.get(position).getSpeciality());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), articlesdetail.class);
+                intent.putExtra("name",articleList.get(position).getName());
+                intent.putExtra("speciality",articleList.get(position).getSpeciality());
+                v.getContext().startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -53,6 +66,7 @@ protected Button btn;
 
         TextView tvArticleName;
         TextView tvArticleSpeciality;
+        TextView btnreadmore;
 
         public ArticleListViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -28,14 +28,14 @@ public class cliniclist extends AppCompatActivity {
         tvTitle.setText("Suggested Clinic");
 
         List<doctor> clinicListMain = new ArrayList<>();
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
-        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "9855018411",""));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
+        clinicListMain.add(new doctor("Miteri polyclinic","","","","","Bharatpur, 44207", "Bharatpur","985501841"));
 
 
         RecyclerView rvList = findViewById(R.id.rvClinic);

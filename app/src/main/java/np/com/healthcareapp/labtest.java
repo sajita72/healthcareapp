@@ -30,26 +30,19 @@ public class labtest extends AppCompatActivity {
 
         List<doctor> packageListMain = new ArrayList<>();
 
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","hello","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","Rs 400","","","k xa ho","","",""));
+        packageListMain.add(new doctor("Package1: Full body checkup","Package includes","","","Amphetamine Morphine Canabiniodes             Blood Tests ","","",""));
+        packageListMain.add(new doctor("Package2: Thyroid checkup","Package includes","","","CBC Morphine Canabiniodes            Blood Tests","","",""));
+        packageListMain.add(new doctor("Package3: Bone,Joint checkup","Package includes","","","Canabiniodes Morphine Amphetamine          Blood Tests","","",""));
+        packageListMain.add(new doctor("Package4: Diabetes checkUp","Package includes","","","Amphetamine Calcium Canabiniodes            Blood Tests","","",""));
+        packageListMain.add(new doctor("Package5: Women Health checkup","Package includes","","","Amphetamine Morphine Canabiniodes            Blood Tests","","",""));
+        packageListMain.add(new doctor("Package6: Child Health checkup","Package includes","","","Amphetamine Morphine Canabiniodes           Cocaine  Blood Tests","","",""));
+        packageListMain.add(new doctor("Package7: Blood CheckUp","Package includes","","","Amphetamine Morphine Canabiniodes           Cocaine  Blood Tests","","",""));
+        packageListMain.add(new doctor("Package8: Blood CheckUp","Package includes","","","Amphetamine Morphine Canabiniodes           Cocaine  Blood Tests","","",""));
 
 
 
 
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","","Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
-        packageListMain.add(new doctor("Package1: Blood CheckUp","","","", "Rs 400","", "",""));
+
 
         RecyclerView rvList = findViewById(R.id.rvPackages);
         packagelistadapter adapter = new packagelistadapter(this,packageListMain);

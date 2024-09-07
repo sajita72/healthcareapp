@@ -17,6 +17,7 @@ import np.com.healthcareapp.R;
 import np.com.healthcareapp.ambulancelist;
 import np.com.healthcareapp.articlelist;
 import np.com.healthcareapp.cliniclist;
+import np.com.healthcareapp.doctordetail;
 import np.com.healthcareapp.labtest;
 import np.com.healthcareapp.medicinelist;
 import np.com.healthcareapp.productlist;
@@ -98,15 +99,6 @@ public class homefragment extends Fragment {
 
 
 
-        TextView textView6 = (TextView) context.findViewById(R.id.tvview);
-        textView6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, productlist.class);
-                startActivity(intent);
-            }
-        });
-
         ImageView img =(ImageView)  context.findViewById(R.id.pk1);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +117,31 @@ public class homefragment extends Fragment {
             }
         });
 
+
+
+
+
+
+
+
+        TextView textView7 = (TextView) context.findViewById(R.id.tvsec1);
+        textView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, productlist.class);
+                startActivity(intent);
+            }
+        });
+
+
+        TextView textView8 = (TextView) context.findViewById(R.id.tvsec2);
+        textView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, productlist.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

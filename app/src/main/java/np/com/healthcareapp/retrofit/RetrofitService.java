@@ -13,7 +13,7 @@ package np.com.healthcareapp.retrofit;
 public class RetrofitService {
 
     private static Retrofit retrofit = null;
-    private static final String base_url = "https://eb33-36-252-104-156.ngrok-free.app/";
+    private static final String base_url = "https://63ed-2400-1a00-b070-ce7b-ec22-5206-f3e9-4e4d.ngrok-free.app/";
 
     private RetrofitService() {}
 
@@ -30,6 +30,7 @@ public class RetrofitService {
                     .build();
         }
         return retrofit;
+
     }
 
 }

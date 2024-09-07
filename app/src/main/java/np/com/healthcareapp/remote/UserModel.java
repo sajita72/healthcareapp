@@ -5,19 +5,37 @@ public class UserModel {
 
 
 
-    private String token, success, name,email,password;
+    private String token, success, name,email,password,address,otp;
 
 
     public UserModel() {
     }
 
 
-    public UserModel(String token, String success, String name, String email,String password) {
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getOtp() {
+        return otp;
+    }
+
+    public void setOtp(String otp) {
+        this.otp = otp;
+    }
+
+    public UserModel(String token, String success, String name, String email, String password, String address,String otp) {
         this.token = token;
         this.success = success;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.address = address;
+        this.otp = otp;
     }
 
     public String getToken() {

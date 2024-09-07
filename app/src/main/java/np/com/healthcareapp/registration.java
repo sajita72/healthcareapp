@@ -3,6 +3,7 @@ package np.com.healthcareapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +24,7 @@ import retrofit2.Response;
 
 
 
-public class registration extends AppCompatActivity implements View.OnClickListener {
+public class registration extends AppCompatActivity {
     TextView login;
     EditText name, email, password;
     Button btn;
@@ -36,83 +37,70 @@ public class registration extends AppCompatActivity implements View.OnClickListe
 
 
         String token = TokenManager.getToken(getApplicationContext());
-       if(token != null){
-           Toast.makeText(registration.this,"registration success",Toast.LENGTH_SHORT);
-       }
-          //  Intent tokenIntent = new Intent(this, np.com.healthcareapp.login.class);
-           // startActivity(tokenIntent);
 
+
+
+       //  if (token != null) {
+      //  Intent tokenIntent = new Intent(this, login.class);
+       //   startActivity(tokenIntent);
+      //}
+
+
+        login = findViewById(R.id.tvlogin);
+        Intent intent = new Intent(registration.this, login.class);
+        login.setOnClickListener(v -> startActivity(intent));
 
 
 
         name = findViewById(R.id.user);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.tvlogin);
+
         btn = findViewById(R.id.btnregister);
 
-        login.setOnClickListener(this);
-        btn.setOnClickListener(this);
+        btn.setOnClickListener(v -> {
+
+            String userName = name.getText().toString();
+            String userEmail = email.getText().toString();
+            String userPassword = password.getText().toString();
+
+            Register registerservice = RetrofitService.getService(registration.this).create(Register.class);
+            UserModel userModel = new UserModel(null, null, userName, userEmail, userPassword, null,null);
+            Call<UserModel> call = registerservice.postRegister(userModel);
 
 
-    }
+            call.enqueue(new Callback<UserModel>() {
+                @Override
+                public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+
+                    if (response.isSuccessful()) {
+                        Log.v("registrationn","success");
+                        UserModel responseUserModel = response.body();
+                        String token = responseUserModel.getToken();
+                        String success = responseUserModel.getSuccess();
+                        if (Objects.equals(success, "true")) {
+                            Log.v("registrationn","true");
+
+                            Intent intent1 = new Intent(registration.this, bottomnav.class);
+                            startActivity(intent1);
+                            Toast.makeText(registration.this, "Successfully registered", Toast.LENGTH_SHORT).show();
 
 
-    @Override
-    public void onClick(View v) {
-
-
-        int id = v.getId();
-
-        if (id == R.id.btnregister) {
-            registerUser();
-        } else {
-            if (id == R.id.tvlogin) {
-                switchOnLogin();
-            }
-        }
-
-    }
-
-    private void registerUser() {
-
-        String userName = name.getText().toString();
-        String userEmail = email.getText().toString();
-        String userPassword = password.getText().toString();
-
-        Register registerservice = RetrofitService.getService(registration.this).create(Register.class);
-        UserModel userModel = new UserModel(null, null, userName, userEmail, userPassword);
-        Call<UserModel> call = registerservice.postRegister(userModel);
-
-        call.enqueue(new Callback<UserModel>() {
-            @Override
-            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-
-                if(response.isSuccessful()){
-                    UserModel responseUserModel = response.body();
-                    String token = responseUserModel.getToken();
-                    String success = responseUserModel.getSuccess();
-                    if(Objects.equals(success, "true")){
-                        TokenManager.saveToken(getApplicationContext(),token);
-                        Intent intent = new Intent(registration.this,login.class);
-                        startActivity(intent);
+                        }
                     }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<UserModel> call, Throwable throwable) {
 
-            }
+                @Override
+                public void onFailure(Call<UserModel> call, Throwable throwable) {
+                    Log.v("registrationn",throwable.getMessage().toString());
+                }
+
+            });
+
         });
-
-
     }
-
-    private void switchOnLogin() {
-        Intent i = new Intent(registration.this, login.class);
-        startActivity(i);
-    }
-
-
 }
+
+
+

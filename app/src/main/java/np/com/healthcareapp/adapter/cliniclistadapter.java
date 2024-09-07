@@ -40,6 +40,8 @@ public class cliniclistadapter extends RecyclerView.Adapter<cliniclistadapter.Cl
         holder.tvPhoneNumber.setText(clinicList.get(position).getNumber());
 
 
+
+
     }
 
     @Override

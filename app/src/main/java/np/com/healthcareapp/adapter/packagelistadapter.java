@@ -32,9 +32,11 @@ public class packagelistadapter extends RecyclerView.Adapter<packagelistadapter.
 
 
 
+
     @NonNull
     @Override
     public PackageListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
 
         return new PackageListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_packagelist, parent, false));
     }
@@ -44,6 +46,8 @@ public class packagelistadapter extends RecyclerView.Adapter<packagelistadapter.
         holder.tvPackageName.setText(packageList.get(position).getName());
         holder.tvPackagePrice.setText(packageList.get(position).getSpeciality());
 
+
+
 holder.itemView.setOnClickListener(new View.OnClickListener() {
 
     @Override
@@ -51,13 +55,12 @@ holder.itemView.setOnClickListener(new View.OnClickListener() {
         Intent intent = new Intent(v.getContext(), package_detail.class);
         intent.putExtra("name",packageList.get(position).getName());
         intent.putExtra("description",packageList.get(position).getDescription());
+        intent.putExtra("specilaity",packageList.get(position).getSpeciality());
+
         v.getContext().startActivity(intent);
 
     }
 });
-
-
-
 
         holder.tvPackagePrice.setText(packageList.get(position).getPrice());
 
